@@ -9,7 +9,7 @@ function Navbar() {
                         <div className="flex-shrink-0 group">
                             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-15 group-hover:opacity-40 transition duration-1000"></div>
                             <img
-                                className="relative h-9 w-9 md:h-10 md:w-10 object-contain rounded-lg shadow-lg border border-slate-700/50"
+                                className="relative h-9 w-9 md:h-10 md:w-10 object-cover rounded-full shadow-lg border border-slate-700/50 transition-transform hover:scale-110"
                                 src="/logo.png"
                                 alt="AI Resume Analyzer"
                             />

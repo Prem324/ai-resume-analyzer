@@ -16,7 +16,7 @@ const SplashScreen = () => {
                     <img
                         src="/logo.png"
                         alt="Logo"
-                        className="w-24 h-24 md:w-32 md:h-32 object-contain animate-bounce"
+                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full border-4 border-slate-700/50 shadow-2xl animate-bounce"
                         style={{ animationDuration: '2s' }}
                     />
                 </div>
@@ -30,10 +30,10 @@ const SplashScreen = () => {
                     {/* Loading Bar */}
                     <div className="w-48 h-1 bg-slate-800 rounded-full overflow-hidden mx-auto mt-6">
                         <div
-                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-[loading_2.5s_ease-in-out_forwards]"
+                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-[loading_3s_ease-in-out_forwards]"
                             style={{
                                 width: '0%',
-                                animation: 'loadingProgress 2.5s ease-in-out forwards'
+                                animation: 'loadingProgress 3s ease-in-out forwards'
                             }}
                         ></div>
                     </div>

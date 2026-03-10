@@ -9,10 +9,10 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Show splash screen for 2.5 seconds
+    // Show splash screen for 3 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
