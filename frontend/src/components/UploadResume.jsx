@@ -66,11 +66,11 @@ function UploadResume({ setResult }) {
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
           onClick={() => fileInputRef.current?.click()}
-          className={`w-full h-48 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 ${dragging
-              ? "border-blue-500 bg-blue-500/10"
-              : file
-                ? "border-green-500 bg-green-500/5"
-                : "border-slate-600 hover:border-slate-500 hover:bg-slate-700/30"
+          className={`w-full h-32 md:h-48 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 ${dragging
+            ? "border-blue-500 bg-blue-500/10"
+            : file
+              ? "border-green-500 bg-green-500/5"
+              : "border-slate-600 hover:border-slate-500 hover:bg-slate-700/30"
             }`}
         >
           <input
@@ -81,16 +81,16 @@ function UploadResume({ setResult }) {
             className="hidden"
           />
 
-          <div className="p-3 bg-slate-700/50 rounded-full mb-3">
-            <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="p-2 md:p-3 bg-slate-700/50 rounded-full mb-2 md:mb-3">
+            <svg className="w-5 h-5 md:w-6 md:h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>
           </div>
 
-          <p className="text-base font-medium text-white mb-1 px-4 text-center truncate w-full">
-            {file ? file.name : "Click to upload or drag and drop"}
+          <p className="text-sm md:text-base font-medium text-white mb-1 px-4 text-center truncate w-full">
+            {file ? file.name : "Click to upload or drag & drop"}
           </p>
-          <p className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">PDF only (max 10MB)</p>
+          <p className="text-[9px] md:text-[10px] text-slate-500 uppercase font-bold tracking-tighter">PDF only (max 10MB)</p>
         </div>
       </div>
 
@@ -111,8 +111,8 @@ function UploadResume({ setResult }) {
           onClick={handleUpload}
           disabled={!file || loading}
           className={`w-full max-w-sm py-4 px-6 rounded-2xl font-black text-white uppercase tracking-widest transition-all duration-300 transform active:scale-95 ${!file || loading
-              ? "bg-slate-800 cursor-not-allowed opacity-50 text-slate-500"
-              : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:brightness-110 shadow-xl shadow-blue-900/20 active:shadow-none"
+            ? "bg-slate-800 cursor-not-allowed opacity-50 text-slate-500"
+            : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:brightness-110 shadow-xl shadow-blue-900/20 active:shadow-none"
             }`}
         >
           {loading ? (
