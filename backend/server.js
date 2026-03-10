@@ -24,6 +24,13 @@ app.get("/", (req, res) => {
 // Use environment port or 5000
 const PORT = process.env.PORT || 5000;
 
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error("SERVER ERROR:", err.stack);
+  res.status(500).json({ error: "Internal Server Error" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`API Base URL: /api/resume`);
 });

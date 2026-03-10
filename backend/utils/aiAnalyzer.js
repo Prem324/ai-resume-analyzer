@@ -26,8 +26,10 @@ Resume:
 ${resumeText}`;
   }
 
+  const apiURL = process.env.AI_API_URL || "https://openrouter.ai/api/v1/chat/completions";
+
   const response = await axios.post(
-    "https://openrouter.ai/api/v1/chat/completions",
+    apiURL,
     {
       model: "deepseek/deepseek-chat",
       messages: [
