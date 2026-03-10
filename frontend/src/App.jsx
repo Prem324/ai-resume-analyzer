@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UploadResume from "./components/UploadResume";
 import Result from "./components/Result";
 import Navbar from "./components/Navbar";
+import SplashScreen from "./components/SplashScreen";
 
 function App() {
   const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Show splash screen for 2.5 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <SplashScreen />;
+  }
 
   return (
     <div className="min-h-screen bg-slate-900 overflow-x-hidden">
