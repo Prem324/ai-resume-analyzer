@@ -9,6 +9,19 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Wake up backend on Render (Free Tier)
+    const wakeUpBackend = async () => {
+      try {
+        const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+        await fetch(`${baseUrl}/health`);
+        console.log("Backend wake-up signal sent");
+      } catch (error) {
+        console.error("Backend wake-up failed:", error);
+      }
+    };
+
+    wakeUpBackend();
+
     // Show splash screen for 3 seconds
     const timer = setTimeout(() => {
       setLoading(false);

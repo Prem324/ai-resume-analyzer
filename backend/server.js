@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.send("AI Resume Analyzer API Running");
 });
 
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ status: "ok", message: "Backend is awake" });
+});
+
 // Use environment port or 5000
 const PORT = process.env.PORT || 5000;
 
