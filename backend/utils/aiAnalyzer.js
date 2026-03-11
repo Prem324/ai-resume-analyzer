@@ -26,27 +26,28 @@ Resume:
 ${resumeText}`;
   }
 
-  const apiURL = process.env.AI_API_URL || "https://openrouter.ai/api/v1/chat/completions";
+  const apiURL =
+    process.env.AI_API_URL || "https://openrouter.ai/api/v1/chat/completions";
 
   const response = await axios.post(
     apiURL,
     {
-      model: "deepseek/deepseek-chat",
+      model: "deepseek/deepseek-chat-v3",
       messages: [
         {
           role: "user",
-          content: prompt
-        }
-      ]
+          content: prompt,
+        },
+      ],
     },
     {
       headers: {
         Authorization: `Bearer ${process.env.AI_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "http://localhost:5173",
-        "X-Title": "AI Resume Analyzer"
-      }
-    }
+        "X-Title": "AI Resume Analyzer",
+      },
+    },
   );
 
   return response.data.choices[0].message.content;
