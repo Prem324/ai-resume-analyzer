@@ -2,13 +2,6 @@
 
 > **Your AI-Powered Career Companion** – Analyze your resume with cutting-edge AI, get actionable feedback, and master ATS compatibility scores to land your dream job.
 
-![License](https://img.shields.io/badge/license-ISC-blue)
-![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
-![React](https://img.shields.io/badge/react-19.2.0-61dafb?logo=react)
-![Status](https://img.shields.io/badge/status-active-success)
-
----
-
 ## 📋 Table of Contents
 
 - [About](#about)
@@ -24,8 +17,6 @@
 - [Project Architecture](#project-architecture)
 - [Security & Privacy](#security--privacy)
 - [Troubleshooting](#troubleshooting)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
 
 ---
 
