@@ -2,7 +2,6 @@
 
 A premium, modern web application that leverages Advanced AI (DeepSeek) to analyze resumes, provide strategic career feedback, and calculate ATS compatibility scores based on specific job descriptions.
 
-![AI Resume Analyzer Mockup](https://raw.githubusercontent.com/antigravity-ai/assets/main/mockup-placeholder.png)
 
 ## ✨ Features
 
@@ -75,10 +74,3 @@ A premium, modern web application that leverages Advanced AI (DeepSeek) to analy
 2.  **ATS Match**: Paste a Job Description into the designated area, then upload your resume to see your match percentage and missing keywords.
 3.  **Export**: Click "Generate PDF Report" to get a clean, professional document of your results.
 
-## 🌐 Deployment
-
-Refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on hosting the application on platforms like Render, Vercel, or DigitalOcean.
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
